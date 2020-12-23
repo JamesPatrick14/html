@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body,html{
+    background-image:url("logor.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.start{
+background-color:blue;
+width:150px;
+height: 50px;
+color:yellow;
+align: center;
+}
+input{
+width:150px;
+height: 50px;
+font-size: 20px;
+align: top-bottom;
+margin-top:10px;
+margin-left:10px;
+}
+#header {
+width: 100%;
+height: 120px;
+background: blue;
+text-align: center;
+font-size:xx-large;
+color:yellow;
+ }
+#footer{
+height: 40px;
+border-top: 1px solid gray; 
+text-align: center;
+font-size: 25px;
+color:black;
+ }
+</style>
+<title>Activity No. 4 Zodiac Sign</title>
+ <div id="header">
+   <h1 class="style1" id="zodiac">KNOW YOUR ZODIAC SIGN</h1>
+ </div>
+<div id="footer">
+   <p>&nbsp;</p>
+   <p>&nbsp;</p>
+   <p>&nbsp;</p>
+   <p>&nbsp;</p>
+   <p>&nbsp;</p>
+   <p>&nbsp;</p>
+   <p>&nbsp;</p>
+   <p>&nbsp;</p>
+   <p>&nbsp;</p>
+   <p><br />
+  &copy; 2020 Activity 4.Maming James Patrick P.</p>
+ </div>
+    <script>
+function signs(){
+        var mon=forms.month.value;
+        var day=parseFloat(forms.day.value);
+        if(mon=="January" || mon=="january"){
+            if(day<32){document.getElementById("output").innerHTML="<img src=Aqua.png>";}
+            else{document.getElementById("output").innerHTML="<img src=Capr.png>";} 
+        }
+        else if(mon=="February" || mon=="february"){
+            if(day<19){document.getElementById("output").innerHTML="<img src=Aqua.png>";}
+            else{document.getElementById("output").innerHTML="<img src=Pice.png>";}
+        }
+        else if(mon=="March" || mon=="march"){
+            if(day<21){document.getElementById("output").innerHTML="<img src=Pice.png>";}
+            else{document.getElementById("output").innerHTML="<img src=Arie.png>";}
+        }
+        else if(mon=="April" || mon=="april"){
+            if(day<20){document.getElementById("output").innerHTML="<img src=Arie.png>";}
+            else{document.getElementById("output").innerHTML="<img src=Taur.png>";}
+        }
+        else if(mon=="May" || mon=="may"){
+            if(day<21){document.getElementById("output").innerHTML="<img src=Taur.png>";}
+            else{document.getElementById("output").innerHTML="<img src=Gemi.png>";}
+        }
+        else if(mon=="June" || mon=="june"){
+            if(day<22){document.getElementById("output").innerHTML="<img src=Gemi.png>";}
+            else{document.getElementById("output").innerHTML="<img src=Canc.png>";}
+        }
+        else if(mon=="July" || mon=="july"){
+            if(day<23){document.getElementById("output").innerHTML="<img src=Canc.png>";}
+            else{document.getElementById("output").innerHTML="<img src=Leo.png>";}
+        }
+        else if(mon=="August" || mon=="august"){
+            if(day<23){document.getElementById("output").innerHTML="<img src=Leo.png>";}
+            else{document.getElementById("output").innerHTML="<img src=Virg.png>";}
+        }
+        else if(mon=="September" || mon=="september"){
+            if(day<23){document.getElementById("output").innerHTML="<img src=Virg.png>";}
+            else{document.getElementById("output").innerHTML="<img src=Libr.png>";}
+        }
+        else if(mon=="October" || mon=="october"){
+            if(day<24){document.getElementById("output").innerHTML="<img src=Libr.png>";}
+            else{document.getElementById("output").innerHTML="<img src=Scor.png>";}
+        }
+        else if(mon=="November" || mon=="november"){
+            if(day<22){document.getElementById("output").innerHTML="SCORPIO<img src=Scor.png>";}
+            else{document.getElementById("output").innerHTML="<img src=Sagu.png>";}
+        }
+        else if(mon=="December" || mon=="december"){
+            if(day<22){document.getElementById("output").innerHTML="<img src=Sagu.png>";}
+            else if(day>21){document.getElementById("output").innerHTML="<img src=Capr.png>";}
+        }
+        else {alert("Invalid Input! Try again");
+        
+     }   }
+     
+    </script>
+<body>
+<form name="forms">
+<input type="text" name="Month" id="month" placeholder="Month"  font-size:50px/>
+<input type="number" name="Month" id="day" placeholder="Day"/>
+<input type="button" class="start" id="start" value="ENTER" onclick="signs()"/>
+<p style="font-size: 50px">YOUR ZODIAC SIGN: </p>
+<p id="output" style="font-size: 60px;"></p>
+</form>
+</body>
+</html>
